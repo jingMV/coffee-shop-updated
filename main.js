@@ -20,4 +20,5 @@ function yHandler() {
     }
     console.log(newHeight);
 }
+console.log("hello world");
 
