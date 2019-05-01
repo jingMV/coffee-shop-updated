@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--HEAD-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jing Viado" />
+    <meta name="decription" content="Jing Viado is a web designer frontend web developer with a  one year of experience" />
+    <meta name="keywords" content="Jing, Jing viado, frontend, frontend developer, web designer, ui, graphics, design, filipino frontend web developer, portfolio" />
+    <meta name="resources-type" content="document" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="icon" type="image/gif/png" href="img/cofe.png">
+    <script type="text/javascript" src="main.js"></script>
+    <title>Coffee | Shop</title>
+</head>
+<!--BODY-->
+<body>
+    <!--CONTAINER-->
+    <div class="container">
+        <!--HEADER-->
+        <img id="logo-desktop" src="img/cofe.png" alt="coffee logo">
+        <header>
+
+            
+                <img id="logo" src="img/cofe.png" alt="coffee logo">
+            
+
+            <nav>
+                <img id="menu" src="img/menu_icon.png" onclick="openNav()">
+                <ul id="nav" class="navContent">
+                    <li class="close" onclick="closeNav()">&times;</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contract</a></li>
+                    <div class="social">
+                    <li class="social-link"><img src="img/social-fb.png" alt="facebook-icon"></li>
+                    <li class="social-link"><img src="img/social-ig.png" alt="instagram-icon"></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <!--SECTION-->
+        <section>
+            <h1>
+                Coffee
+            </h1>
+            <p>Coffee is always a good idea.</p>
+
+            <p class="section-about">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatibus numquam provident quas dolorem voluptatem soluta, labore illo consequuntur. Eos consectetur quam similique repudiandae mollitia voluptates fugit reiciendis, ex nostrum!
+            </p>
+
+            <div id="section-slide">
+                <img class="slide" src="img/coffee_1.jpg" alt="slide-1">
+                <img class="slide" src="img/coffee_2.jpg" alt="slide-2">
+                <img class="slide" src="img/coffee_3.jpg" alt="slide-3">
+
+                <div class="dotted">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+        <!--WHAT'S NEW-->
+        <div id="newProduct">
+            <h2>What's New</h2>
+            <div class="product-container" id="product-container">
+                <div class="product-hide">
+                <div class="product">
+                    <img src="img/coffee_1.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis atque nihil, magni aspernatur aut, optio fugiat cumque soluta architecto ratione voluptate sint vitae, nulla tempore odit quae nobis quasi? Ut eius molestias sapiente quaerat tenetur sed voluptate, amet itaque, iusto, temporibus veniam culpa? Aut, atque adipisci? Officiis quisquam alias sequi!</p>
+                </div>
+
+                <div class="product">
+                    <img src="img/coffee_2.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis atque nihil, magni aspernatur aut, optio fugiat cumque soluta architecto ratione voluptate sint vitae, nulla tempore odit quae nobis quasi? Ut eius molestias sapiente quaerat tenetur sed voluptate, amet itaque, iusto, temporibus veniam culpa? Aut, atque adipisci? Officiis quisquam alias sequi!</p>
+                </div>
+
+                <div class="product">
+                    <img src="img/coffee_3.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis atque nihil, magni aspernatur aut, optio fugiat cumque soluta architecto ratione voluptate sint vitae, nulla tempore odit quae nobis quasi? Ut eius molestias sapiente quaerat tenetur sed voluptate, amet itaque, iusto, temporibus veniam culpa? Aut, atque adipisci? Officiis quisquam alias sequi!</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    //automatic slide
+var slide = document.getElementsByClassName("slide");
+var dots = document.getElementsByClassName("dot");
+var slideIndex = 0;
+
+function autoSlide() {
+    for (var i = 0; i < slide.length;i++) {
+        slide[i].style.display = "none";
+    }
+    for(var i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace (" active", "");
+    }
+    slideIndex++;
+    if (slide.length < slideIndex) {
+        slideIndex = 1;
+    }
+    slide[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(autoSlide, 3000);
+}
+autoSlide();
+    </script>
+</body>
+</html>
